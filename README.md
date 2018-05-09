@@ -63,6 +63,7 @@ Note:
 13) LINUX users please remove quotes on the file and folder path when using drag and drop
 14) If you do not have administrative privileges on your machine where CSBB-v3.0 is installed then please run CSBB with sudo command : for example : sudo perl CSBB-v3.0_MacOS.pl install or sudo perl CSBB-v3.0_MacOS.pl Process-ChIP-ATAC_SingleEnd
 15) FetchGEO and FetchSRA modules have been removed from CSBB-v3.0 and three new modules have been added : ProcessPublicData, Process-ChIP-ATAC_SingleEnd and Process-ChIP-ATAC_PairedEnd
+16) CSBB-v3.0 uses bash scripts to process RNA-Seq and ChIP/ATAC-Seq data inhouse or public [User can change parameters of tools that CSBB-v3.0 uses in bash scripts. By default, CSBB-v3.0 uses all default parameters. If any change has been done to Bash scripts then please on command line browse to Modules folder and do chmod +x BashScriptName.sh
 
 
 ~~~Running each module
