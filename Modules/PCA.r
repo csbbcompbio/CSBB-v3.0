@@ -1,0 +1,60 @@
+##### Taking Command Line Arguments 
+args = commandArgs(trailingOnly=TRUE)
+path <- args[1]
+filenameR <- args[2]
+####### Installing libraries for generating Interactive PCA Plot
+print ("Checking and installing required packages")
+if (!require("devtools")) install.packages("devtools",repos="http://cran.us.r-project.org")
+print ("Loading required dependencies for devtools")
+library(withr)
+library(httr)
+library(curl)
+library(devtools)
+print ("Loading required dependencies for devtools")
+if (!require("plotly")) install.packages("plotly",repos="http://cran.us.r-project.org")
+if (!require("ggplot2")) install.packages("ggplot2",repos="http://cran.us.r-project.org")
+if (!require("gplots")) install.packages("gplots",repos="http://cran.us.r-project.org")
+if (!require("R2HTML")) install.packages("R2HTML",repos="http://cran.us.r-project.org")
+if (!require("RColorBrewer")) install.packages("RColorBrewer",repos="http://cran.us.r-project.org")
+if (!require("htmlwidgets")) install.packages("htmlwidgets",repos="http://cran.us.r-project.org")
+if (!require("reshape2")) install.packages("reshape2",repos="http://cran.us.r-project.org")
+
+#####load Libraries
+print ("Loading required libraries")
+library(plotly)
+library(ggplot2)
+library(R2HTML)
+library(htmlwidgets)
+library(RColorBrewer)
+library(gplots)
+library(reshape2)
+
+
+
+setwd(path)
+file <- filenameR
+data <- as.matrix(read.table(file,sep="\t",header=T,row.names=1,check.names=F))
+print ("This is how your input data looks")
+head(data)
+print ("Removing Genes/Entities with zero variance")
+data <- data[apply(data[,-1], 1, function(x) !all(x==0)),]
+data.t <- t(data)
+print ("Performing Principal Component Analysis and generating interactive and static plots")
+pca <- prcomp(data.t, center=T, scale. = T, na.action=na.omit)
+pc1 <- round(pca$sdev[1]^2/sum(pca$sdev^2)*100,2)
+pc2 <- round(pca$sdev[2]^2/sum(pca$sdev^2)*100,2)
+PC1_use <- paste0("PC1", "(", pc1, "%)")
+PC2_use <- paste0("PC2", "(", pc2, "%)")
+Samples_temp <- rownames(data.t)
+Samples <- factor(Samples_temp)
+scores <- data.frame(Samples_temp, pca$x[,1:3])
+MIN_X <- min(scores$PC1)
+Max_X <- max(scores$PC1)
+file <- strsplit(file,".txt")
+outfile1 <- paste0(file, "_static", "_PCA_plot", ".png")
+header <- toString(file)
+header <- paste0("Principal Component Analysis of ", header)
+pc1.2 <- qplot(x=PC1, y=PC2, data=scores, colour=Samples, xlim=c(MIN_X-75,Max_X+75)) + xlab(PC1_use) + ylab(PC2_use) + geom_point(shape=1) + geom_text(aes(label=Samples_temp), hjust=0, vjust=0) + scale_size_area() + theme(axis.text = element_text(size = 14),axis.line.x = element_line(colour = "black"),axis.line.y = element_line(colour = "black"),legend.key = element_rect(fill = "white"),legend.background = element_rect(fill = "white"),panel.grid.major = element_line(),panel.grid.minor = element_blank(),panel.background = element_rect(fill = "white")) + ggtitle(header)
+ggsave(outfile1,width=10,height=10,limitsize = FALSE)
+outfile <- paste0(file, "_interactive", "_PCA_plot", ".html")
+htmlwidgets::saveWidget(as.widget(ggplotly()), outfile)

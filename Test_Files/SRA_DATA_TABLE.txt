@@ -1,0 +1,9 @@
+##### Please see all this information can be gathered from https://www.ncbi.nlm.nih.gov/sra
+##### SRA PUBLIC DATA INFO FILE
+##### SRA ID : For example  - SRR2924628
+##### SPECIES : human or mouse or xenopus-leavis or xenopus-trop or zebrafish
+##### ASSAY TYPE : RNA-SEQ or ATAC or ChIP-TF or ChIP-Epigenetic
+##### READ TYPE : SINGLE-END or PAIRED-END
+##### SAMPLE NAME : WHOLE-Genome
+SRRid	Species	Assay	ReadType	SampleName
+SRR2924628	xenopus-leavis	RNA-SEQ	SINGLE-END	Sample1
