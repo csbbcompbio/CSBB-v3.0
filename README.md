@@ -1,32 +1,17 @@
 # CSBB-v3.0
 CSBB - Computational Suite For Bioinformaticians and Biologists
 -> -> -> version3.0
-################################################## please read ###################################
-****** CSBB is learning and evolving. If you have questions or Bugs, please contact Praneet Chaturvedi on contact on https://github.com/csbbcompbio/CSBB-v3.0 ******
 ****** Please report bugs and issues on https://github.com/csbbcompbio/CSBB-v3.0 ***********
-################################################## ############# #################################
 
-
-################################################## ############# #################################
 Author Info ::
 Author/Developer : Praneet Chaturvedi
 Designation : Senior Analyst Bioinformatics @ Cincinnati Children's Hospital and Medical Center
-################################################## ############# #################################
 
 
 CSBB-v3.0 offers 18 statistical, visualization and bioinformatics pipelines/modules for several bioinformatics applications. Detailed instructions on how to execute each module is give below. 
 Also refer to white paper in the package for detailed explanation of each module!!!
 
-What's New:
-	1) Added ChIP and ATAC seq pipelines for human, mouse and frog
-	2) Added ProcessPublicData Module for processing public data that is from downloading .sra files to end results of ChIP/ATAC and RNA-Seq pipelines [Sorted Bams, Indexed Bams, BigWigs, Peaks and Expression Results]
-	3) Updated install module for installing all dependencies automatically
-	4) CSBB now downloads required files and softwares from CSBB repository [https://sourceforge.net/projects/csbb-repository/]
-	5) FetchGEO and FetchSRA module removed
-	6) Various Bug Fixes
-	
-    
- 
+
 ~~~Steps to make the application executable.
 
 Step 1: Open the terminal/Command prompt in MAC OS, LINUX & Windows respectively.
