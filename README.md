@@ -4,7 +4,7 @@ CSBB - Computational Suite For Bioinformaticians and Biologists
 
 Developer : Praneet Chaturvedi, Senior Analyst Bioinformatics @ Cincinnati Children's Hospital and Medical Center
 
-CSBB-v3.0 offers 18 statistical, visualization and bioinformatics pipelines/modules for several bioinformatics applications. Detailed instructions on how to execute each module is give below. 
+CSBB provides 18 modules focused on analytical tasks like performing upper-quantile normalization, interactive visualization and next generation sequencing pipelines. CSBB now also has capability to process public data. Providing User with End to End pipeline experience. Detailed instructions on how to execute each module is give below. 
 Also refer to white paper in the package for detailed explanation of each module!!!
 
 
