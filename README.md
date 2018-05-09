@@ -65,6 +65,19 @@ Note:
 15) FetchGEO and FetchSRA modules have been removed from CSBB-v3.0 and three new modules have been added : ProcessPublicData, Process-ChIP-ATAC_SingleEnd and Process-ChIP-ATAC_PairedEnd
 16) CSBB-v3.0 uses bash scripts to process RNA-Seq and ChIP/ATAC-Seq data inhouse or public [User can change parameters of tools that CSBB-v3.0 uses in bash scripts. By default, CSBB-v3.0 uses all default parameters. If any change has been done to Bash scripts then please on command line browse to Modules folder and do chmod +x BashScriptName.sh
 
+How to Create SRA-DATA_Table.txt ?
+
+##### Please see all this information can be gathered from https://www.ncbi.nlm.nih.gov/sra
+##### SRA PUBLIC DATA INFO FILE
+##### SRA ID : For example  - SRR2924628
+##### SPECIES : human or mouse or xenopus-leavis or xenopus-trop or zebrafish
+##### ASSAY TYPE : RNA-SEQ or ATAC or ChIP-TF or ChIP-Epigenetic
+##### READ TYPE : SINGLE-END or PAIRED-END
+##### SAMPLE NAME : WHOLE-Genome
+SRRid	Species	Assay	ReadType	SampleName
+SRR2924628	xenopus-leavis	RNA-SEQ	SINGLE-END	Sample1
+Please Find SRA_DATA_TABLE.txt in the package to test ProcessPublicData Module
+
 
 ~~~Running each module
 
