@@ -44,7 +44,6 @@ Note:
 7) If you wish to use your own reference indexes of Bowtie2 and RSEM then please match the current name and file format of the files in the index folders and place them in the Modules folder
 8) Now CSBB supports processing of public data from SRA [https://www.ncbi.nlm.nih.gov/sra]
 9) If running perl CSBB-v3.0_MacOS.pl or perl CSBB-v3.0_Linux.pl gives an error then follow steps mentioned below:
-   
    if MacOS then run commands mentioned below from command line:
    *) sudo perl -MCPAN -e 'install Bundle::CPAN'
    *) sudo perl -MCPAN -e 'install Capture::Tiny'
