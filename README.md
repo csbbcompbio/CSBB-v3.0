@@ -28,7 +28,9 @@ cd /home/xxx/Downloads/CSBB-v3.0
 Requirements For CSBB-v3.0::
 1) Perl  -> -> ->     [MACOS and Linux are preloaded with perl, but if perl is missing on your system then please intall perl using : https://www.perl.org/get.html]
 2) Python2.7+  -> ->  [MACOS and Linux are preloaded with python, but if python is missing on your system then please intall pyhton using : https://www.python.org/downloads/]
-3) R   -> -> -> -> -> [Please install R on your machine from : https://www.r-project.org/]  
+3) R   -> -> -> -> -> [Please install R on your machine from : https://www.r-project.org/]
+  We recommend using R-3.3.3 or R-3.4.4 [CSBB-v3.0 is throughly tested with these R versions]
+  CSBB-v3.0 installs all required R packages automatically and if required packages are not installed then running time of the   module which require packages will increase [Only one time process] [CSBB-v3.0 automatically checks for latest updates for R packages as well]
 
 Note: 
 1) When you run CSBB-v3.0 first time, then please do run install module to automatically download files and install dependencies [tools/softwares]
