@@ -14,7 +14,7 @@ system('sudo apt-get install linuxbrew-wrapper');
 system('brew', 'update');
 system('brew', 'doctor');
 system('sudo apt-get install bowtie2');
-system('brew','install','homebrew/science/samtools');
+system('brew','install','samtools');
 system('brew','upgrade','samtools');
 system('sudo apt-get install bedtools');
 system('sudo apt-get install fastqc');
