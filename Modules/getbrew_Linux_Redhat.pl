@@ -14,7 +14,7 @@ system('sudo yum install linuxbrew-wrapper');
 system('brew', 'update');
 system('brew', 'doctor');
 system('sudo yum install bowtie2');
-system('brew','install','homebrew/science/samtools');
+system('brew','install','samtools');
 system('brew','upgrade','samtools');
 system('sudo yum update samtools');
 system('sudo yum install bedtools');
