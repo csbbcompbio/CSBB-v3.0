@@ -290,8 +290,15 @@ XII) Running ProcessPublicData
 perl CSBB-v3.0_MacOS.pl ProcessPublicData Path_to_SRA-DATA_Table Path_to_Folder_to_write_results
 perl CSBB-v3.0_Linux.pl ProcessPublicData Path_to_SRA-DATA_Table Path_to_Folder_to_write_results
 ====================================================
+Example : perl CSBB-v3.0_MacOS.pl ProcessPublicData SRA_DATA_TABLE.txt /users/xxx/Desktop/PublicData
+
 *** Please see for SRA-DATA_table example in the CSBB-v3.0 folder
 *** All the information has been provided in the example table file
+*** If running CSBB on HPC[high performance cluster machine] with no internet access then
+   please download .sra files that you want to process and place them in a folder where you
+   want CSBB to write results.
+   For example : /users/xxx/Desktop/PublicData already has .sra files then
+   perl CSBB-v3.0_MacOS.pl ProcessPublicData SRA_DATA_TABLE.txt /users/xxx/Desktop/PublicData
 
 
 XIII) Running InteractiveScatterPlot
